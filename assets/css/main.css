@@ -1017,7 +1017,18 @@ h6 {
 }
 
 .footer-logo {
-  width: 50px; 
+  display: inline-block;
+  border: 1px solid var(--color-primary);
+}
+
+.footer-logo:hover {
+  border: 1px solid #dd38a6;
+  transform: scale(1.1);
+  transition: 0.3s all linear;
+}
+
+.footer-logo img {
+  width: 150px;
 }
 
 .footer .copyright {
@@ -1035,6 +1046,31 @@ h6 {
 .footer .credits a {
   color: var(--color-primary);
 }
+
+.footer-title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.4rem;
+}
+
+.footer ul li a, .footer .credits a,
+.social a i, .footer-logo a {
+  text-decoration: none;
+}
+
+.footer ul li a:hover, .footer .credits a:hover,
+.social a i:hover {
+  color: #dd38a6;
+  transform: scale(1.1);
+  transition: 0.3s all linear;
+}
+
+.social a i{
+  margin-top: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
 
 /*--------------------------------------------------------------
 # Keyframes
