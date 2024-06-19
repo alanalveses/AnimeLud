@@ -41,17 +41,17 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center  me-auto me-lg-0">
+      <a href="index.html" class="logo lights d-flex align-items-center  me-auto me-lg-0">
         <i class="bx bx-up-arrow-alt"></i>
         <h1>AnimeLud</h1>
       </a>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a href="index.html">Popular</a></li>
-          <li><a href="premieres.html">Estreias</a></li>
-          <li><a href="ranking.html" class="active">Classificação</a></li>
-          <li class="dropdown"><a href="#"><span>Galeria</span> <i
+          <li class="nav"><a href="index.html">Popular</a></li>
+          <li class="nav"><a href="ranking.html" class="active">Classificação</a></li>
+          <li class="nav"><a href="premieres.html">Estreias</a></li>
+          <li class="dropdown nav"><a href="#"><span>Galeria</span> <i
                 class="bx bx-chevron-down bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
               <li><a href="gallery.html">Shounen</a></li>
@@ -72,8 +72,8 @@
               </li>
             </ul>
           </li>
-          <li><a href="movies.html">Filmes</a></li>
-          <li><a href="contact.html">Contato</a></li>
+          <li class="nav"><a href="movies.html">Filmes</a></li>
+          <li class="nav"><a href="contact.html">Contato</a></li>
         </ul>
       </nav>
 
@@ -97,31 +97,16 @@
         <div class="row d-flex justify-content-center">
           <div class="col-lg-6 text-center">
             <h2>Classificação</h2>
-            <p>Aqui você confere a lista do top 10 de um gênero de anime.</p>
-
-            <a class="cta-btn" href="#">Iniciar</a>
-
+            <p>Aqui você confere a lista do top 100 animes mais bem avaliados pelo publico.</p>
           </div>
         </div>
       </div>
     </div><!-- End Page Header -->
 
-    <section class="sample-page">
-      <div class="container" data-aos="fade-up">
-        <div class="d-flex align-items-center justify-content-center">
-          <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module">
-          </script>
-          <dotlottie-player src="https://lottie.host/17db5f5a-497f-4d68-bdf3-5598c5283fe6/i3OzGseLBr.json"
-            background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay>
-          </dotlottie-player>
-        </div>
+    <h2 class="title-ranking">Top 100 Animes</h2>
+    
+    <div id="anime-list"></div>
 
-        <p class="text-center display-4 mb-5">
-          Ops, desculpe. Página em construção!
-        </p>
-
-      </div>
-    </section>
 
   </main><!-- End #main -->
 
@@ -156,8 +141,7 @@
           <h2 class="footer-title">Sobre Mim</h2>
           <ul class="list-unstyled">
             <li><a href="">Site Pessoal</a></li>
-            <li><a
-                href="https://www.linkedin.com/in/alanalveses?utm_source=share&utm_campaign=share_
+            <li><a href="https://www.linkedin.com/in/alanalveses?utm_source=share&utm_campaign=share_
                 via&utm_content=profile&utm_medium=android_app">
                 Linkedin
               </a>
@@ -224,6 +208,7 @@
 
   <!-- Main JS -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/animeRanking.js"></script>
 
 </body>
 
