@@ -19,21 +19,22 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
   
     function fetchAnimes(page) {
-      return fetch('https://graphql.anilist.co', {
-        method: 'POST',
+      return axios.post('https://graphql.anilist.co', {
+        query,
+        variables: { page }
+      }, {
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json',
-        },
-        body: JSON.stringify({ query, variables: { page } })
+        }
       })
-      .then(response => response.json())
-      .then(data => data.data.Page.media)
+      .then(response => response.data.data.Page.media)
       .catch(error => {
         console.error('Error fetching data:', error);
         return [];
       });
     }
+    
   
     Promise.all([fetchAnimes(1), fetchAnimes(2)])
       .then(results => {
